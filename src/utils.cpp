@@ -27,6 +27,8 @@ int get_computer_option() {
  *  "paper"    => 0 
  *  "scissors" => 1 
  *  "rock"     => 2
+ * 
+ * @pre `input` shall be "rock" or "paper" or "scissors".
  */
 int get_player_option(const std::string& input) {
     return ((input[1] - 97) % 10) / 2;
@@ -38,12 +40,9 @@ int get_player_option(const std::string& input) {
  * @param player The option chosen by the player.
  * @param computer The option chosen by the computer.
  * @return String that states the result.
+ * 
+ * @pre `player` and `computer` shall be 0, 1 or 2.
  */
 std::string winner(int player, int computer) {
     return results[(player - computer + 3) % 3];
-}
-
-int sum(int a, int b)
-{
-    return a + b;
 }

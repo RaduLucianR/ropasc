@@ -14,6 +14,15 @@ int main() {
     while (std::cin >> player_input) {
         if (player_input == "q") break;
 
+        if (player_input != "rock" &&
+            player_input != "scissors" &&
+            player_input != "paper"
+        ) {
+            std::cout << "Invalid input!" << std::endl;
+            std::cout << "Enter rock, paper, or scissors (or 'q' to quit): ";
+            continue;
+        }
+
         try {
             int player_option = get_player_option(player_input);
             int computer_option = get_computer_option();
@@ -23,7 +32,7 @@ int main() {
         } catch (const std::invalid_argument& e) {
             std::cout << e.what() << std::endl;
         }
-        
+
         std::cout << "Enter rock, paper, or scissors (or 'q' to quit): ";
     }
 
