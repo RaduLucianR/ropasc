@@ -26,8 +26,10 @@ TEST(RockPaperScissorsTest, Winner) {
 
 TEST(RockPaperScissorsTest, GetComputerOption) {
     std::set<int> valid_options = {0, 1, 2};
-    for (int i = 0; i < 100; ++i) {
+
+    for (int i = 0; i < 100; i ++) {
         int option = get_computer_option();
+        
         EXPECT_TRUE(valid_options.find(option) != valid_options.end());
     }
 }
