@@ -31,16 +31,16 @@ add_executable(ropasc
 if(test)
     enable_testing()
 
-    add_executable(hello_test
+    add_executable(unitTests
     tests/test.cc
     src/utils.cpp
     )
 
     target_link_libraries(
-    hello_test
-    GTest::gtest_main
+        unitTests
+        GTest::gtest_main
     )
 
     include(GoogleTest)
-    gtest_discover_tests(hello_test)
+    gtest_discover_tests(unitTests)
 endif()
