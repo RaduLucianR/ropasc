@@ -13,15 +13,24 @@ TEST(RockPaperScissorsTest, GetPlayerOption) {
  * 2 is rock
  */
 TEST(RockPaperScissorsTest, Winner) {
-    EXPECT_EQ(winner(0, 0), "It's a tie!");
-    EXPECT_EQ(winner(0, 1), "Computer wins!");
-    EXPECT_EQ(winner(0, 2), "You win!");
-    EXPECT_EQ(winner(1, 0), "You win!");
-    EXPECT_EQ(winner(1, 1), "It's a tie!");
-    EXPECT_EQ(winner(1, 2), "Computer wins!");
-    EXPECT_EQ(winner(2, 0), "Computer wins!");
-    EXPECT_EQ(winner(2, 1), "You win!");
-    EXPECT_EQ(winner(2, 2), "It's a tie!");
+    EXPECT_EQ(winner(0, 0, 1), "It's a tie!\n");
+    EXPECT_EQ(winner(0, 1, 1), "Computer wins!\n");
+    EXPECT_EQ(winner(0, 2, 1), "You win!\n");
+    EXPECT_EQ(winner(1, 0, 1), "You win!\n");
+    EXPECT_EQ(winner(1, 1, 1), "It's a tie!\n");
+    EXPECT_EQ(winner(1, 2, 1), "Computer wins!\n");
+    EXPECT_EQ(winner(2, 0, 1), "Computer wins!\n");
+    EXPECT_EQ(winner(2, 1, 1), "You win!\n");
+    EXPECT_EQ(winner(2, 2, 1), "It's a tie!\n");
+    EXPECT_EQ(winner(0, 0, 0), "Invalid input\n");
+    EXPECT_EQ(winner(0, 1, 0), "Invalid input\n");
+    EXPECT_EQ(winner(0, 2, 0), "Invalid input\n");
+    EXPECT_EQ(winner(1, 0, 0), "Invalid input\n");
+    EXPECT_EQ(winner(1, 1, 0), "Invalid input\n");
+    EXPECT_EQ(winner(1, 2, 0), "Invalid input\n");
+    EXPECT_EQ(winner(2, 0, 0), "Invalid input\n");
+    EXPECT_EQ(winner(2, 1, 0), "Invalid input\n");
+    EXPECT_EQ(winner(2, 2, 0), "Invalid input\n");
 }
 
 TEST(RockPaperScissorsTest, GetComputerOption) {
@@ -32,4 +41,13 @@ TEST(RockPaperScissorsTest, GetComputerOption) {
         
         EXPECT_TRUE(valid_options.find(option) != valid_options.end());
     }
+}
+
+TEST(RockPaperScissorsTest, ComputerAnswer) { 
+    EXPECT_EQ(computer_answer(0, 1), "Computer chose: paper\n");
+    EXPECT_EQ(computer_answer(1, 1), "Computer chose: scissors\n");
+    EXPECT_EQ(computer_answer(2, 1), "Computer chose: rock\n");
+    EXPECT_EQ(computer_answer(0, 0), "");
+    EXPECT_EQ(computer_answer(1, 0), "");
+    EXPECT_EQ(computer_answer(2, 0), "");
 }

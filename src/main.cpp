@@ -3,39 +3,22 @@
 #include <utils.hpp>
 #include <array>
 
-constexpr std::array<const char*, 3> options = {"paper", "scissors", "rock"};
-
 int main() {
     std::string player_input;
     
     std::cout << "Welcome to Rock-Paper-Scissors!" << std::endl;
     std::cout << "Enter rock, paper, or scissors (or 'q' to quit): ";
 
-    while (std::cin >> player_input) {
-        if (player_input == "q") break;
+    while (std::cin >> player_input && player_input != "q") {
+        bool validInput = player_input == "rock" || player_input == "scissors" || player_input == "paper";
+        int player_option = get_player_option(player_input);    // Convert player's option to integer
+        int computer_option = get_computer_option();            // Get integer computer option
 
-        if (player_input != "rock" &&
-            player_input != "scissors" &&
-            player_input != "paper"
-        ) {
-            std::cout << "Invalid input!" << std::endl;
-            std::cout << "Enter rock, paper, or scissors (or 'q' to quit): ";
-            continue;
-        }
-
-        try {
-            int player_option = get_player_option(player_input);
-            int computer_option = get_computer_option();
-            
-            std::cout << "Computer chose: " << options[computer_option] << std::endl;
-            std::cout << winner(player_option, computer_option) << std::endl;
-        } catch (const std::invalid_argument& e) {
-            std::cout << e.what() << std::endl;
-        }
-
+        std::cout << computer_answer(computer_option, validInput); // Empty string for invalid input
+        std::cout << winner(player_option, computer_option, validInput);
         std::cout << "Enter rock, paper, or scissors (or 'q' to quit): ";
     }
 
-    std::cout << "Goodbye!" << std::endl;
+    std::cout << "Goodbye!";
     return 0;
 }
