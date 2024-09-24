@@ -1,5 +1,12 @@
-# ropasc
+# RoPaSc
 Efficient Rock Paper Scissors CLI game
+
+### How to play?
+1. Compile the project as described in the section below.
+2. Run the `ropasc.exe` executable.
+3. Write one of: "rock", "paper", "scissors", and then press Enter. Any other input string is considered invalid.
+4. The computer picks one of the options as well and the winner is decided. You are informed of the computer's choice and the winner of the round.
+5. The player is prompted again to make a choice. This repeats until the player decides to quit which can be done by entering "q" and pressing Enter.
 
 ### How to compile?
 1. Clone the repository:
