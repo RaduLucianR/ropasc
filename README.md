@@ -1,5 +1,8 @@
 # RoPaSc
-Efficient Rock Paper Scissors CLI game
+Efficient Rock-Paper-Scissors Interactive CLI game
+
+![image](https://github.com/user-attachments/assets/c12f86e1-7560-494c-a8a6-9aafc22cf623)
+
 
 ### How to play?
 1. Compile the project as described in the section below.
