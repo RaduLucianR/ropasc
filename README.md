@@ -26,7 +26,7 @@ mkdir build
 cd build
 cmake -G "Visual Studio 17 2022" ..
 ```
-If you want to compile the test suite as well then do:
+   If you want to compile the test suite as well then do:
 ```
 cd build
 cmake -G "Visual Studio 17 2022" -Dtest=ON ..
@@ -46,7 +46,7 @@ cmake --build .
 ```
 .\build\Debug\unitTests.exe
 ```
-Or by executing the following in the `build` directory:
+   Or by executing the following in the `build` directory:
 ```
 ctest
 ```
