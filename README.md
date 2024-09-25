@@ -1,5 +1,5 @@
 # RoPaSc
-Efficient Rock-Paper-Scissors Interactive CLI game
+Rock-Paper-Scissors Interactive CLI game
 
 ![image](https://github.com/user-attachments/assets/c12f86e1-7560-494c-a8a6-9aafc22cf623)
 
