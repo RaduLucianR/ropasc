@@ -11,6 +11,11 @@ Efficient Rock-Paper-Scissors Interactive CLI game
 4. The computer picks one of the options as well and the winner is decided. You are informed of the computer's choice and the winner of the round.
 5. The player is prompted again to make a choice. This repeats until the player decides to quit which can be done by entering "q" and pressing Enter.
 
+### Assumptions
+1. The user shall interact with the game via the console
+2. The user shall not introduce a string with more than 50 characters
+3. The game shall inform the user about the game instruction's via the console.
+
 ### How to compile?
 1. Clone the repository:
 ```

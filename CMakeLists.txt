@@ -22,7 +22,7 @@ FetchContent_MakeAvailable(googletest)
 # Source files
 add_executable(ropasc 
     src/main.cpp
-    src/utils.cpp
+    src/game.cpp
 )
 
 ##############
@@ -33,12 +33,13 @@ if(test)
 
     add_executable(unitTests
     tests/test.cc
-    src/utils.cpp
+    src/game.cpp
     )
 
     target_link_libraries(
         unitTests
         GTest::gtest_main
+        GTest::gmock
     )
 
     include(GoogleTest)

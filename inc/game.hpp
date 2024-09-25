@@ -17,9 +17,8 @@ int get_computer_option();
  *  "scissors" => 1 
  *  "rock"     => 2
  * 
- * @pre `input` shall be "rock" or "paper" or "scissors".
  */
-int get_player_option(const std::string& input);
+int get_player_option(const std::string& input, bool validInput);
 
 /**
  * @brief Compute rock-paper-scissors result.
@@ -46,3 +45,11 @@ std::string winner(int player, int computer, bool validInput);
  * @pre `validInput` shall be 0 or 1.
  */
 std::string computer_answer(int computer, bool validInput);
+
+/**
+ * @brief Performs one round of RPS.
+ * 
+ * @param player_input The option of the human player.
+ * @return String that states computer's answer and the round's result.
+ */
+std::string game_round(std::string player_input);
