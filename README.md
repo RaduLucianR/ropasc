@@ -1,5 +1,13 @@
 # RoPaSc
-Rock-Paper-Scissors Interactive CLI game
+Very efficient Rock-Paper-Scissors Interactive CLI game, optimized with techniques that avoid if-statements (i.e. conditional branches).
+
+Techniques that (help) replace conditional branches:
+1. Array indexing
+   a. Instead of checking what to print based on an input with an if-else chain, use the input as an index to an array that contains the print messages 
+3. Custom hash function
+   a. Instead of converting a string to an integer with an if-else chain, create a custom hash function based on the limited number of possible input strings
+5. Interpolation with boolean variables
+   a. Instead of computing a result on a specific branch that meets a condition, compute both branches and discard one based on a boolean computation, i.e. return result1 * bool + result2 * (1 - bool)
 
 ![image](https://github.com/user-attachments/assets/c12f86e1-7560-494c-a8a6-9aafc22cf623)
 
